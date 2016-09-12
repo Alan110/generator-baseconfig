@@ -1,17 +1,18 @@
 {
   "name": "generator-baseconfig",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "生成基本的前端项目配置文件",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luckykun/generator-reactpackage.git"
+    "url": "git@github.com:Alan110/generator-baseconfig.git"
   },
   "files": [
     "generators/app"
   ],
-  "homepage": "",
+  "homepage": "git@github.com:Alan110/generator-baseconfig",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "baseconfig"
   ],
   "main": "index.js",
   "scripts": {
