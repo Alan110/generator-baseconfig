@@ -1,11 +1,16 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "app",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node ./build/build.js"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "babel-preset-es2015-rollup": "^3.0.0",
+        "rollup-plugin-babel": "^2.7.1",
+        "rollup-plugin-replace": "^1.1.1",
+        "rollup-plugin-uglify": "^1.0.1"
+    }
 }

@@ -24,10 +24,16 @@ var baseconfig = yeoman.Base.extend({
         ));
     },
     generateBasic: function() {  //按照自己的templates目录自定义
-        //this.copy('package.json', 'package.json');   //拷贝文件
-        this.copy('.gitignore', '.gitignore');
-        this.copy('.ackrc', '.ackrc');
-        this.copy('.eslintrc.json', '.eslintrc.json');
+
+        // 目录
+        ['src','dist'].forEach(function(el,index){
+            this.directory(el,el);
+        },this);
+
+        // 文件
+        ['package.json','.babelrc','build.js','.eslintrc.js'].forEach(function(el,index){
+            this.copy(el,el);
+        },this);
     },
     end: function() {
         this.log(yosay(
