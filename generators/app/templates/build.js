@@ -16,6 +16,7 @@ var cache;
 let defaultConfig = {
     plugins: [
         babel({
+            presets : 'es2015-rollup',
             exclude: 'node_modules/**'
         }),
         replace({

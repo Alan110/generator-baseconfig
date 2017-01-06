@@ -23,6 +23,14 @@ var baseconfig = yeoman.Base.extend({
             'I am going to build your app!'
         ));
     },
+    install : function () {
+         this.npmInstall([
+                 'babel-preset-es2015-rollup',
+                 'rollup-plugin-replace',
+                 'rollup-plugin-uglify',
+                 'rollup-plugin-babel'
+             ], { 'save-dev': true });
+    },
     generateBasic: function() {  //按照自己的templates目录自定义
 
         // 目录
@@ -31,7 +39,7 @@ var baseconfig = yeoman.Base.extend({
         },this);
 
         // 文件
-        ['package.json','.babelrc','build.js','.eslintrc.js'].forEach(function(el,index){
+        ['package.json','build.js','.eslintrc.js'].forEach(function(el,index){
             this.copy(el,el);
         },this);
     },
