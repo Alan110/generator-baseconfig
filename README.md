@@ -11,8 +11,15 @@ bable
 rollup
 * npm install -g rollup
 
-## 使用rollup js API作为构建入口，支持同时输出多份不同的构建，只需修改build.js 的configs对象
 
+## gulp构建
+
+`yo baseconfig `
+
+## nodejs 原生构建
+使用rollup js API作为构建入口，支持同时输出多份不同的构建，只需修改build.js 的configs对象
+
+`yo baseconfig  node`
 
 ## 编译
 `node build.js`
