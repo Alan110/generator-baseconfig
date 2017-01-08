@@ -19,10 +19,10 @@ var baseconfig = yeoman.Base.extend({
     //            cfg = answers;
     //        }.bind(this));
     //    },
-    initializing : function(){
+    initializing: function() {
         this.argument('type', {
             type: String,
-            required: false,  // 可选，不强制
+            required: false, // 可选，不强制
             default: 'gulp'
         });
     },
@@ -52,7 +52,7 @@ var baseconfig = yeoman.Base.extend({
         }, this);
 
         // 文件
-        ['package.json', 'build.js', '.eslintrc.js'].forEach(function(el, index) {
+        ['package.json', '.tern-project', 'build.js', '.eslintrc.js'].forEach(function(el, index) {
             this.copy(el, el);
         }, this);
     },
@@ -64,11 +64,12 @@ var baseconfig = yeoman.Base.extend({
         }, this);
 
         // 文件
-        ['package.json', 'gulpfile.js', '.eslintrc.js'].forEach(function(el, index) {
+        ['package.json', '.tern-project', 'gulpfile.js', '.eslintrc.js'].forEach(function(el, index) {
             this.copy(el, el);
         }, this);
 
     },
+
     install: function() {
         var type = this.options.type;
 
